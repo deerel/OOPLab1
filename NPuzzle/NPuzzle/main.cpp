@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-	int boardSize = 3;
+	int boardSize = 4;
 	Board *board = new Board(boardSize);
 	char userInput = NULL;
 

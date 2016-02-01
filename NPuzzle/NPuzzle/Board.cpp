@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Board::Board(int size=4)
+Board::Board(int size)
 {
 	this->size = size;
 	blocks = new Block[size*size];
@@ -105,7 +105,7 @@ int Board::findEmptyBlock()
 {
 	for (int i = 0; i < (size*size); i++)
 	{
-		if (blocks[i].value == 0)
+		if (blocks[i].getValue() == 0)
 			return i;
 	}
 	return -1;
@@ -116,7 +116,7 @@ bool Board::isSorted()
 
 	for (int i = 0; i < size*size; i++)
 	{
-		if (blocks[i].value != i + 1 && i < (size*size)-1)
+		if (blocks[i].getValue() != i + 1 && i < (size*size)-1)
 			return false;
 	}
 

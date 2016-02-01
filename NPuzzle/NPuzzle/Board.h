@@ -9,6 +9,8 @@ private:
 	int size;
 	Block *blocks;
 	void randomizeBoard();
+	void swap(int, int);
+	int findEmptyBlock();
 public:
 	Board(int);
 	~Board();
@@ -18,8 +20,6 @@ public:
 	void moveDown();
 	void moveLeft();
 	void moveRight();
-	void swap(int, int);
-	int findEmptyBlock();
 };
 
 #endif
