@@ -26,8 +26,6 @@ Board::~Board()
 
 void Board::printBoard()
 {
-	string spacer;
-
 	for (int i = 0; i < (size*size); i++)
 	{
 		
@@ -42,7 +40,7 @@ void Board::printBoard()
 void Board::randomizeBoard()
 {
 	srand((int)time(NULL));
-	int numOfSwaps = 100;
+	int numOfSwaps = 20;
 	int indexRange = size*size;
 
 		for (int i = 0; i < numOfSwaps; i++)
@@ -105,11 +103,11 @@ int Board::findEmptyBlock()
 bool Board::isSorted()
 {
 
-	//for (int i = 0; i < size*size; i++)
-	//{
-	//	if (blocks[i].value != i + 1 && i < (size*size)-1)
-	//		return false;
-	//}
+	for (int i = 0; i < size*size; i++)
+	{
+		if (blocks[i].value != i + 1 && i < (size*size)-1)
+			return false;
+	}
 
 	return true;
 
