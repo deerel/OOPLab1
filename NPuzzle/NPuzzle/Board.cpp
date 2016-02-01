@@ -105,11 +105,11 @@ int Board::findEmptyBlock()
 bool Board::isSorted()
 {
 
-	//for (int i = 0; i < size*size; i++)
-	//{
-	//	if (blocks[i].value != i + 1 && i < (size*size)-1)
-	//		return false;
-	//}
+	for (int i = 0; i < size*size; i++)
+	{
+		if (blocks[i].value != i + 1 && i < (size*size)-1)
+			return false;
+	}
 
 	return true;
 

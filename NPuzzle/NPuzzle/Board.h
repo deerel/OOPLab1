@@ -21,7 +21,6 @@ public:
 	void moveRight();
 	void swap(int, int);
 	int findEmptyBlock();
-
 };
 
 #endif
