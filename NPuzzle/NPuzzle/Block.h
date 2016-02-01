@@ -3,10 +3,12 @@
 
 class Block
 {
-public:
+private:
 	int value;
+public:
 	void print();
 	void setValue(int);
+	int getValue();
 };
 
 #endif

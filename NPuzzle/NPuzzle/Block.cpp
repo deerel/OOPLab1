@@ -25,3 +25,8 @@ void Block::setValue(int value)
 	if (value >= 0)
 		this->value = value;
 }
+
+int Block::getValue()
+{
+	return value;
+}
