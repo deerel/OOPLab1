@@ -6,9 +6,9 @@
 
 using namespace std;
 
-Board::Board()
+Board::Board(int size=4)
 {
-	size = 4;
+	this->size = size;
 	blocks = new Block[size*size];
 
 	for (int i = 0; i < (size*size); i++)
