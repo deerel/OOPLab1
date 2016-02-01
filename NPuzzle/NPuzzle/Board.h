@@ -10,7 +10,7 @@ private:
 	Block *blocks;
 	void randomizeBoard();
 public:
-	Board();
+	Board(int);
 	~Board();
 	void printBoard();
 	bool isSorted();
