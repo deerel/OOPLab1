@@ -36,18 +36,29 @@ void Board::printBoard()
 	}
 }
 
-
 void Board::randomizeBoard()
 {
 	srand((int)time(NULL));
-	int numOfSwaps = 20;
-	int indexRange = size*size;
+	int numOfSwaps = 100;
 
-		for (int i = 0; i < numOfSwaps; i++)
+	for (int i = 0; i < numOfSwaps; i++)
+	{
+		switch (rand() % 4)
 		{
-			swap(rand() % indexRange, rand() % indexRange);
+		case 0:
+			moveUp();
+			break;
+		case 1:
+			moveDown();
+			break;
+		case 2:
+			moveLeft();
+			break;
+		case 3:
+			moveRight();
+			break;
 		}
-
+	}
 }
 
 void Board::swap(int indexOne, int indexTwo)
