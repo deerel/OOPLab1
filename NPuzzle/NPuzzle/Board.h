@@ -14,7 +14,6 @@ public:
 	~Board();
 	void printBoard();
 	bool isSorted();
-	void makeMove(char);
 	void moveUp();
 	void moveDown();
 	void moveLeft();
